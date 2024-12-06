@@ -71,7 +71,8 @@ function getDIYMediaList(){
       items.push("Title: " + val["Title"] + "<br/>");
       items.push("Description: " + val["Description"] + "<br/>");
       items.push("URL: <a href='" + val["URL"] + "' target='_blank'>" + val["URL"] + "</a><br/>");
-      items.push("Tags: " + val["Tags"] + ", Views: " + val["Views"] + "<br/>");
+      items.push("Tags: " + val["Tags"] + "<br/>");
+      items.push("Views: " + val["Views"] + "<br/>");
       items.push("Date Created: " + val["DateCreated"] + "<br/>");
       items.push('<button type="button" id="deleteMedia" class="btn btn-danger" onclick="deleteMedia(' + val["MediaID"] + ')">Delete</button> <br/><br/>');
 
