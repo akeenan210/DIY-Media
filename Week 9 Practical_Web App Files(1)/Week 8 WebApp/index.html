@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>DIY Media</title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  
+  <body>
+
+    <div  class="container">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center;">
+              <h3>DIY Media</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!--New Asset Box-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+              <p>DIY Media</p>
+
+              <form style="font-size: 10pt;" id="newAssetForm">
+                <div class="mb-3">
+                  <label for="Username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="Username">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="Title">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Description" class="form-label">Description</label>
+                  <input type="text" class="form-control" id="Description">
+                </div>
+
+                <div class="mb-3">
+                  <label for="URL" class="form-label">URL</label>
+                  <input type="text" class="form-control" id="URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Tags" class="form-label">Tags</label>
+                  <input type="text" class="form-control" id="Tags">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Views" class="form-label">Views</label>
+                  <input type="number" class="form-control" id="Views">
+                </div>
+
+                <div class="mb-3">
+                  <label for="DateCreated" class="form-label">Date Created</label>
+                  <input type="datetime" class="form-control" id="DateCreated">
+                </div>
+            
+                <button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br/><br/>
+                
+              </form>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!-- view Asset Area-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;" >
+              <div style="padding:5px;">
+                <button  id = "retAssets" type="button" class="btn btn-primary">View Assets</button>
+              </div>
+
+              <div id="DIYMediaList">
+
+                <h4>Please click the view Assets button if you wish to view assets on the system.</h4>
+
+              </div>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+    </div>
+  
+  </body>
+</html>
