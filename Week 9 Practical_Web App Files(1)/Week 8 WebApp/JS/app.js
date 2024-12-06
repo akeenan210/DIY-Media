@@ -68,7 +68,8 @@ function getDIYMediaList(){
     //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
     $.each(data, function(key, val) {
       items.push("Username: " + val["Username"] + "<br/>");
-      items.push("Title: " + val["Title"] + ", Description: " + val["Description"] + "<br/>");
+      items.push("Title: " + val["Title"] + "<br/>");
+      items.push("Description: " + val["Description"] + "<br/>");
       items.push("URL: <a href='" + val["URL"] + "' target='_blank'>" + val["URL"] + "</a><br/>");
       items.push("Tags: " + val["Tags"] + ", Views: " + val["Views"] + "<br/>");
       items.push("Date Created: " + val["DateCreated"] + "<br/>");
