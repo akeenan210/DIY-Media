@@ -2,6 +2,22 @@
 <html lang="en" ng-app="Dashboard">
 
 <head>
+  <!-- NEW -->
+  <script src="https://js.monitor.azure.com/scripts/b/ai.2.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var appInsights = window.appInsights || function (config) {
+      function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+      var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f;
+      for (s.src = config.url || "https://js.monitor.azure.com/scripts/b/ai.2.min.js", u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.queue = [], i = ["trackEvent", "trackPageView", "trackException", "trackTrace", "trackMetric", "startTrackPage", "stopTrackPage", "startTrackEvent", "stopTrackEvent", "addTelemetryInitializer", "flush"], f = 0; f < i.length; f++) r(i[f]);
+      return t;
+    }({
+      instrumentationKey: "30b9d61d-2011-485d-b46d-bc7cd74963fe"
+    });
+  
+    window.appInsights = appInsights;
+    appInsights.trackPageView();
+  </script>
+
   <meta charset="UTF-8">
 
   <title>DIY Media</title>
