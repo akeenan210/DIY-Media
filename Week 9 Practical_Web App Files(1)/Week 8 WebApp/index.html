@@ -1,105 +1,159 @@
 <!doctype html>
 <html lang="en" ng-app="Dashboard">
-  <head>
-    <meta charset="UTF-8">
 
-    <title>DIY Media</title>
+<head>
+  <meta charset="UTF-8">
 
-      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
-      <script type="text/javascript" src="JS/bootstrap.js"></script>
-      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
-      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+  <title>DIY Media</title>
 
-      <script type="text/javascript" src="JS/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+  <script type="text/javascript" src="JS/bootstrap.js"></script>
+  <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
 
-  </head>
-  
-  <body>
+  <script type="text/javascript" src="JS/app.js"></script>
 
-    <div  class="container">
+</head>
 
-        <!--Header-->
-        <div class="row align-items-start">
-            <div class="col-2"  ></div>
+<body>
 
-            <div class="col-8" style="text-align: center;">
-              <h3>DIY Media</h3>
-            </div>
+  <div class="container">
 
-            <div class="col-2"  ></div>
-        </div>
+    <!--Header-->
+    <div class="row align-items-start">
+      <div class="col-2"></div>
 
-        <!--New Asset Box-->
-        <div class="row align-items-start">
-            <div class="col-2"  ></div>
+      <div class="col-8" style="text-align: center;">
+        <h3>DIY Media</h3>
+      </div>
 
-            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
-              <p>DIY Media</p>
-
-              <form style="font-size: 10pt;" id="newAssetForm">
-                <div class="mb-3">
-                  <label for="Username" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="Username">
-                </div>
-
-                <div class="mb-3">
-                  <label for="Title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="Title">
-                </div>
-
-                <div class="mb-3">
-                  <label for="Description" class="form-label">Description</label>
-                  <input type="text" class="form-control" id="Description">
-                </div>
-
-                <div class="mb-3">
-                  <label for="URL" class="form-label">URL</label>
-                  <input type="text" class="form-control" id="URL">
-                </div>
-
-                <div class="mb-3">
-                  <label for="Tags" class="form-label">Tags</label>
-                  <input type="text" class="form-control" id="Tags">
-                </div>
-
-                <div class="mb-3">
-                  <label for="Views" class="form-label">Views</label>
-                  <input type="number" class="form-control" id="Views">
-                </div>
-
-                <div class="mb-3">
-                  <label for="DateCreated" class="form-label">Date Created</label>
-                  <input type="datetime" class="form-control" id="DateCreated">
-                </div>
-            
-                <button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br/><br/>
-                
-              </form>
-            </div>
-
-            <div class="col-2"  ></div>
-        </div>
-
-        <!-- view Media Area-->
-        <div class="row align-items-start">
-            <div class="col-2"  ></div>
-
-            <div class="col-8" style="text-align: left;" >
-              <div style="padding:5px;">
-                <button  id = "retAssets" type="button" class="btn btn-primary">View DIY Media</button>
-              </div>
-
-              <div id="DIYMediaList">
-
-                <h4>Please click the "View DIY Media" button if you wish to view DIY media on the system.</h4>
-
-              </div>
-            </div>
-
-            <div class="col-2"  ></div>
-        </div>
-
+      <div class="col-2"></div>
     </div>
-  
-  </body>
+
+    <!--New Asset Box-->
+    <div class="row align-items-start">
+      <div class="col-2"></div>
+
+      <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+        <p>DIY Media</p>
+
+        <form style="font-size: 10pt;" id="newAssetForm">
+          <div class="mb-3">
+            <label for="Username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="Username">
+          </div>
+
+          <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title">
+          </div>
+
+          <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="Description">
+          </div>
+
+          <div class="mb-3">
+            <label for="URL" class="form-label">URL</label>
+            <input type="text" class="form-control" id="URL">
+          </div>
+
+          <div class="mb-3">
+            <label for="Tags" class="form-label">Tags</label>
+            <input type="text" class="form-control" id="Tags">
+          </div>
+
+          <div class="mb-3">
+            <label for="Views" class="form-label">Views</label>
+            <input type="number" class="form-control" id="Views">
+          </div>
+
+          <div class="mb-3">
+            <label for="DateCreated" class="form-label">Date Created</label>
+            <input type="datetime-local" class="form-control" id="DateCreated">
+          </div>
+
+          <button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br /><br />
+
+        </form>
+      </div>
+
+      <div class="col-2"></div>
+    </div>
+
+    <!-- Update Asset Box (Hidden by Default) -->
+    <div id="updateAssetBox" class="row align-items-start" style="display: none;">
+      <div class="col-2"></div>
+
+      <div class="col-8" style="text-align: left; border-bottom: 1px solid #222222;">
+        <p>Update DIY Media</p>
+
+        <form style="font-size: 10pt;" id="updateAssetForm">
+          <div class="mb-3">
+            <label for="updateUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="updateUsername">
+          </div>
+
+          <div class="mb-3">
+            <label for="updateTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="updateTitle">
+          </div>
+
+          <div class="mb-3">
+            <label for="updateDescription" class="form-label">Description</label>
+            <input type="text" class="form-control" id="updateDescription">
+          </div>
+
+          <div class="mb-3">
+            <label for="updateURL" class="form-label">URL</label>
+            <input type="text" class="form-control" id="updateURL">
+          </div>
+
+          <div class="mb-3">
+            <label for="updateTags" class="form-label">Tags</label>
+            <input type="text" class="form-control" id="updateTags">
+          </div>
+
+          <div class="mb-3">
+            <label for="updateViews" class="form-label">Views</label>
+            <input type="number" class="form-control" id="updateViews">
+          </div>
+
+          <div class="mb-3">
+            <label for="updateDateCreated" class="form-label">Date Created</label>
+            <input type="datetime-local" class="form-control" id="updateDateCreated">
+          </div>
+
+          <button type="button" id="updateFormButton" class="btn btn-success">Update</button>
+          <button type="button" id="cancelUpdate" class="btn btn-secondary">Cancel</button>
+        </form>
+      </div>
+
+      <div class="col-2"></div>
+    </div>
+
+
+    <!-- view Media Area-->
+    <div class="row align-items-start">
+      <div class="col-2"></div>
+
+      <div class="col-8" style="text-align: left;">
+        <div style="padding:5px;">
+          <button id="retAssets" type="button" class="btn btn-primary">View DIY Media</button>
+        </div>
+
+        <div id="DIYMediaList">
+
+          <h4>Please click the "View DIY Media" button if you wish to view DIY media on the system.</h4>
+
+        </div>
+      </div>
+
+      <div class="col-2"></div>
+    </div>
+
+  </div>
+
+</body>
+
 </html>

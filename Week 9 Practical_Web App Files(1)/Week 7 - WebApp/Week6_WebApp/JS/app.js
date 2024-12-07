@@ -1,7 +1,5 @@
-//The URIs of the REST endpoint
+// The URIs of the REST endpoint
 IUPSURI = "https://prod-08.northcentralus.logic.azure.com:443/workflows/1fa3d4d4223245c48a458c6efdb20804/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=8E6v7jamblhq8wf8oM72fyV1C3psNKlRnGr8fwtpuCM";
-// RIMURI = "https://prod-20.northcentralus.logic.azure.com/workflows/d1e78f122ae5497e91986684a62f5816/triggers/When_a_HTTP_request_is_received/paths/invoke/rest/v1/media/?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=X4wK8SpJQLfCFtmZ9sl61AuV8cI0dZxTlcZgXr3dZHs";
-// RAMURI = "https://prod-05.northcentralus.logic.azure.com/workflows/43dec4bd39434eb4897aab14cfd03f86/triggers/When_a_HTTP_request_is_received/paths/invoke/rest/v1/media?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=KkSSnLfxkdf9NQ3voAJgmph8doi7M3WAJapUFJumlkI";
 DIYMEDIARetrieveALLIMAGES = "https://prod-14.northcentralus.logic.azure.com:443/workflows/897b5e170174426782f70f5eb52996b1/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=mvRk041piW8XJDtOavhuaDNubUU_31RESXAlSoBmsDo";
 
 BLOB_ACCOUNT = "https://diymediablobstorage.blob.core.windows.net";
@@ -40,7 +38,7 @@ function submitNewDIYMedia() {
   submitData.append('userName', $('#userName').val());
   submitData.append('File', $("#UpFile")[0].files[0]);
 
-  //Post the form data to the endpoint, note the need to set the content type header
+  // Post the form data to the endpoint, note the need to set the content type header
   $.ajax({
     url: IUPSURI,
     data: submitData,
